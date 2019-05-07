@@ -56,10 +56,14 @@ class App extends React.Component{
         <div className="panel-header">
           <Titles />
         </div>
-        <div className="form-control col-xs-5">
-          <Forms getWeather={this.getWeather}/>
-        </div>
-        <div className="panel-body col-xs-7">
+		<div className="row">
+			<div className="form-control">
+				<div className="col-xs-5">
+				  <Forms getWeather={this.getWeather}/>
+				</div>
+			</div>
+		</div>
+        <div className="panel-body">
           <Weather temperature={this.state.temperature}
           city={this.state.city}
           country={this.state.country}
