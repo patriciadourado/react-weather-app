@@ -22,7 +22,7 @@ class App extends React.Component{
       e.preventDefault();//Prevent default behavior (not refresh)
       const city = e.target.elements.city.value;
       const country = e.target.elements.country.value;
-      const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}&units=metric`);
+      const api_call = await fetch(`https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}&units=metric`);
       const data = await api_call.json();
         
       if(city && country){
@@ -57,21 +57,19 @@ class App extends React.Component{
           <Titles />
         </div>
 		<div className="row">
-			<div className="form-control">
-				<div className="col-xs-5">
-				  <Forms getWeather={this.getWeather}/>
+				<div className="form-control">
+					  <Forms getWeather={this.getWeather}/>
 				</div>
-			</div>
+				<div className="panel-body">
+					  <Weather temperature={this.state.temperature}
+					  city={this.state.city}
+					  country={this.state.country}
+					  humidity={this.state.humidity}
+					  description={this.state.description}
+					  error={this.state.error}
+					  />
+				</div>
 		</div>
-        <div className="panel-body">
-          <Weather temperature={this.state.temperature}
-          city={this.state.city}
-          country={this.state.country}
-          humidity={this.state.humidity}
-          description={this.state.description}
-          error={this.state.error}
-          />
-          </div>
       </div>
     );
   }

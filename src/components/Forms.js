@@ -11,7 +11,7 @@ class Forms extends React.Component{
             <form onSubmit={this.props.getWeather}>
                 <input type="text" name="city" placeholder="City"/>
                 <input type="text" name="country" placeholder="Country (ex. BR)"/>
-                <button className="btn-primary"> Know Weather</button>
+                <button>Know Weather</button>
             </form>
         );
     }
