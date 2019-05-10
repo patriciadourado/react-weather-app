@@ -5,6 +5,10 @@
 
 */
 
+#container{
+	display:flex;
+}
+
 .panel-header{
   display: flex;
   align-items: center;
@@ -34,21 +38,23 @@ button{
   height:100vh;
   display: flex;
   padding-top: 70px;
-  padding-left: 10px;
   justify-content: center;
   background: linear-gradient(to right, #000000, #e7e0e0);
 }
 
 .info{
 	display:table-row;
+	box-sizing:border-box;
+	float: left;
+	padding: 15px;
+	overflow: auto;
 }
 
-.info-weather{
+#info-weather{
   width: 60%;
   font-size: 20px;
   font-weight: 200;
-  letter-spacing: 2px;
-  
+  letter-spacing: 2px;  
 }
 
 .table tr:first-child td{
@@ -57,5 +63,14 @@ button{
 
 .error-message{
   color: #fff;
+}
+
+div.info-weather {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.info-weather table {
+  display: inline-block;
 }
 
