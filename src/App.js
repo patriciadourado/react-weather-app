@@ -52,23 +52,21 @@ class App extends React.Component{
   }
   render(){
     return (
-      <div>
+      <div className="column">
         <div className="panel-header">
           <Titles />
         </div>
-		<div className="row">
-				<div className="form-control">
-					  <Forms getWeather={this.getWeather}/>
-				</div>
-				<div className="panel-body">
-					  <Weather temperature={this.state.temperature}
-					  city={this.state.city}
-					  country={this.state.country}
-					  humidity={this.state.humidity}
-					  description={this.state.description}
-					  error={this.state.error}
-					  />
-				</div>
+			<div className="form-control">
+				  <Forms getWeather={this.getWeather}/>
+			</div>
+			<div className="panel-body">
+				  <Weather temperature={this.state.temperature}
+				  city={this.state.city}
+				  country={this.state.country}
+				  humidity={this.state.humidity}
+				  description={this.state.description}
+				  error={this.state.error}
+				  />
 		</div>
       </div>
     );
