@@ -8,7 +8,6 @@ import React from "react";
 class Weather extends React.Component{
     render(){
         return(
-		<div className="info">
             <div className="info-weather">
 				<div className="table">
 					<table>
@@ -36,7 +35,6 @@ class Weather extends React.Component{
                     {this.props.error && <p>{this.props.error}</p>}
                 </div>
             </div>
-		</div>
         );
     }
 }
