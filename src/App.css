@@ -94,3 +94,8 @@ div.info-weather table {
 	display: block;
 	font-weight: bold;
 }
+.footer .copyright a {
+  text-decoration: none;
+  color: #c8c7c7;
+	font-weight: bold;
+}
